@@ -13,6 +13,8 @@ private:
 	void Initialise();
 	void Update();
 	void Render();
+	void DrawTriangle(glm::vec3 t);
+	void DrawTriangleStack(glm::vec3 s);
 
 	CShaderProgram *m_pShaderProgram;
 	CHighResolutionTimer *m_pTimer;
@@ -20,6 +22,7 @@ private:
 	glm::mat4 *m_pViewMatrix;
 	glm::mat4 *m_pProjectionMatrix;
 	GLuint m_uiVAO;	// A vertex array object (to wrap VBOs)
+	float m_spacing;
 
 public:
 	Game();
